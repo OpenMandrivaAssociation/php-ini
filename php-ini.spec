@@ -3,14 +3,12 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.2.2
+Version:	5.2.3
 Release:	%mkrel 1
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
 Source0:	php.ini
-Provides:	php5-ini
-Obsoletes:	php5-ini
 Requires(post):	ccp >= 0.4.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
