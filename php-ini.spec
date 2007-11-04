@@ -3,8 +3,8 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.2.4
-Release:	%mkrel 1
+Version:	5.2.5
+Release:	%mkrel 0.RC2.1
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
