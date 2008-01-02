@@ -10,6 +10,7 @@ URL:		http://www.php.net
 License:	PHP License
 Source0:	php.ini
 Requires(post):	ccp >= 0.4.0
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The php-ini package contains the ini file required for PHP.
