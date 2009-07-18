@@ -4,7 +4,7 @@
 Summary:	INI files for PHP
 Name:		php-ini
 Version:	5.3.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
@@ -44,7 +44,8 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.ini
+%config(noreplace) %{_sysconfdir}/php.ini
 %dir %{_sysconfdir}/php.d
 %dir %{_libdir}/php
+%dir %{_datadir}/php
 %dir %{_libdir}/php/extensions
