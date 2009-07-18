@@ -29,8 +29,9 @@ perl -p -i -e "s|/usr/lib|%{_libdir}|" php.ini
 %install
 rm -rf %{buildroot}
 
-install -d %{buildroot}%{_sysconfdir}/php.d
-install -d %{buildroot}%{_libdir}/php/extensions
+install -d -m 755 %{buildroot}%{_sysconfdir}/php.d
+install -d -m 755 %{buildroot}%{_libdir}/php/extensions
+install -d -m 755 %{buildroot}%{_datadir}/php
 
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php.ini
 
