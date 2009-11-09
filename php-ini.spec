@@ -4,7 +4,7 @@
 Summary:	INI files for PHP
 Name:		php-ini
 Version:	5.3.1
-Release:	%mkrel 0.3
+Release:	%mkrel 0.4
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
@@ -34,6 +34,7 @@ install -d -m 755 %{buildroot}%{_libdir}/php/extensions
 install -d -m 755 %{buildroot}%{_datadir}/php
 
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php.ini
+install -m0644 php.ini %{buildroot}%{_sysconfdir}/php-cgi-fcgi.ini
 
 %post
 # Upgrade the configuration file using ccp if needed
@@ -46,6 +47,7 @@ rm -rf %{buildroot}
 %files 
 %defattr(-,root,root)
 %config(noreplace) %{_sysconfdir}/php.ini
+%config(noreplace) %{_sysconfdir}/php-cgi-fcgi.ini
 %dir %{_sysconfdir}/php.d
 %dir %{_libdir}/php
 %dir %{_datadir}/php
