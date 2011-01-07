@@ -3,7 +3,7 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.3.4
+Version:	5.3.5
 Release:	%mkrel 1
 Group:		Development/Other
 URL:		http://www.php.net
