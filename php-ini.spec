@@ -3,13 +3,12 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.3.5
-Release:	%mkrel 1
+Version:	5.3.6
+Release:	%mkrel 0.0.RC1.1
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
 Source0:	php.ini
-Requires(post):	ccp >= 0.4.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -35,11 +34,6 @@ install -d -m 755 %{buildroot}%{_datadir}/php
 
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php.ini
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php-cgi-fcgi.ini
-
-%post
-# Upgrade the configuration file using ccp if needed
-# More information in ccp(1)
-ccp --backup --delete --ifexist --set NoOrphans --type ini --oldfile %{_sysconfdir}/php.ini --newfile %{_sysconfdir}/php.ini.rpmnew
 
 %clean
 rm -rf %{buildroot}
