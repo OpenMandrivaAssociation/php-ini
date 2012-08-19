@@ -3,13 +3,12 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.4.5
+Version:	5.4.6
 Release:	1
 Group:		Development/Other
 URL:		http://www.php.net
 License:	PHP License
 Source0:	php.ini
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The php-ini package contains the ini file required for PHP.
