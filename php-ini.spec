@@ -3,7 +3,7 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.4.7
+Version:	5.4.9
 Release:	1
 Group:		Development/Other
 URL:		http://www.php.net
@@ -25,8 +25,6 @@ perl -p -i -e "s|/usr/lib|%{_libdir}|" php.ini
 %build
 
 %install
-rm -rf %{buildroot}
-
 install -d -m 755 %{buildroot}%{_sysconfdir}/php.d
 install -d -m 755 %{buildroot}%{_libdir}/php/extensions
 install -d -m 755 %{buildroot}%{_datadir}/php
@@ -34,14 +32,11 @@ install -d -m 755 %{buildroot}%{_datadir}/php
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php.ini
 install -m0644 php.ini %{buildroot}%{_sysconfdir}/php-cgi-fcgi.ini
 
-%clean
-rm -rf %{buildroot}
-
-%files 
-%defattr(-,root,root)
+%files
 %config(noreplace) %{_sysconfdir}/php.ini
 %config(noreplace) %{_sysconfdir}/php-cgi-fcgi.ini
 %dir %{_sysconfdir}/php.d
 %dir %{_libdir}/php
 %dir %{_datadir}/php
 %dir %{_libdir}/php/extensions
+
