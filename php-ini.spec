@@ -6,7 +6,7 @@ Name:		php-ini
 Version:	5.4.19
 Release:	1
 Group:		Development/Other
-URL:		http://www.php.net
+Url:		http://www.php.net
 License:	PHP License
 Source0:	php.ini
 
@@ -14,7 +14,6 @@ Source0:	php.ini
 The php-ini package contains the ini file required for PHP.
 
 %prep
-
 %setup -c -T
 
 install -m0644 %{SOURCE0} php.ini
@@ -37,6 +36,6 @@ install -m0644 php.ini %{buildroot}%{_sysconfdir}/php-cgi-fcgi.ini
 %config(noreplace) %{_sysconfdir}/php-cgi-fcgi.ini
 %dir %{_sysconfdir}/php.d
 %dir %{_libdir}/php
-%dir %{_datadir}/php
 %dir %{_libdir}/php/extensions
+%dir %{_datadir}/php
 
