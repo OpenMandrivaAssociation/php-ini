@@ -4,7 +4,7 @@
 Summary:	INI files for PHP
 Name:		php-ini
 Version:	5.5.6
-Release:	4
+Release:	5
 Group:		Development/Other
 Url:		http://www.php.net
 License:	PHP License
