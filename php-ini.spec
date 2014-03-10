@@ -3,8 +3,8 @@
 
 Summary:	INI files for PHP
 Name:		php-ini
-Version:	5.5.8
-Release:	2
+Version:	5.5.10
+Release:	1
 Group:		Development/Other
 Url:		http://www.php.net
 License:	PHP License
